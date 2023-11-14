@@ -28,7 +28,7 @@ const Navigation = () => {
             </li>
 
             <li>
-            <NavLink exact to="/competence">
+            <NavLink exact to="/competences">
             
               <i class="bi bi-clipboard-fill">
               </i>

@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import './styles/main.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
+import Competence from './pages/Competence'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
+
 
 const router = createBrowserRouter([
   {
@@ -11,6 +14,22 @@ const router = createBrowserRouter([
     element:<Home />
 
   },
+  {
+    path:'/competences',
+    element:<Competence />
+
+  },
+  {
+    path:'/contact',
+    element:<Contact />
+
+  },
+  {
+    path:'*',
+    element:<NotFound/>
+
+  },
+
 
 ]) 
 
