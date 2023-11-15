@@ -7,7 +7,7 @@ const PorteFolio = () => {
       <div className="porteFolioContent">
         <h3>En cours de construction! 😉</h3>
 
-        <NavLink exact to="/Home">
+        <NavLink exact to="/">
           <i className="bi bi-house-door-fill"></i>
           <span>Accueil</span>
         </NavLink>
