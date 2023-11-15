@@ -34,11 +34,11 @@ const Contact = () => {
                         <h4>LinkedIn</h4>
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://www.linkedin.com">
-                        <h4>LinkedIn</h4>
-                        <i class="bi bi-linkedin"></i>
+                    <a href="https://github.com/nayesoum" target="_blank">
+                        <h4>Github</h4>
+                        <i class="bi bi-github"></i>
                     </a>
-                    
+              
                 </ul>
             </div>
         </div>

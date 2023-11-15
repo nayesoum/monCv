@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Competence from './pages/Competence'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
+import PorteFolio from './pages/PorteFolio'
 
 
 const router = createBrowserRouter([
@@ -25,11 +26,15 @@ const router = createBrowserRouter([
 
   },
   {
+    path:'/portefolio',
+    element:<PorteFolio/>
+
+  },
+  {
     path:'*',
     element:<NotFound/>
 
   },
-
 
 ]) 
 

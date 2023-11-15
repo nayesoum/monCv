@@ -1,21 +1,24 @@
+
 .sidebar{
     // background: $color-1;
     background-color: black;
     font-family: $font-1;
     height: 100%;
     min-height: $min-height;
-    min-width: 264px;
+    min-width: 264px;//la largeur
     border-radius: $borderRadius;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 250px 1fr 108px;
+    display: grid;//responsive quel que se soit ca taille
+    grid-template-columns: 1fr;//1 seule columns
+    grid-template-rows: 250px 1fr 108px;//y aura 3 ligne la 1er ligne fera 250 px 1 fraction elle se placera par rapport au autres element et la dernier 108px
     grid-template-areas: 
+    //ici ca sera mes zones
     "1"
     "2"
     "3";
 
     .id{
+        //la ou il y a ma photo
         grid-area: 1;
         text-align: center;
         user-select: none;
@@ -25,18 +28,19 @@
             position:absolute;
             bottom: 0;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-50%); //pour qu'il se centre
             width: 100%;
 
             img{
+                //pour definir les  couleurs autours de ma photo
                 border-radius: 50%;
-                box-shadow: 0 0 0 0 $color-3, 0 0 0 8px $color-4, 0 0 0 12px $color-2;
+                box-shadow: 0 0 0 4px $color-2, 0 0 0 8px $color-1, 0 0 0 12px $color-2;
                 width: 50%;
             }
             h3{ 
                 font-size: 1.3rem;
-                text-transform: uppercase ;
-                letter-spacing: .2rem;
+                text-transform: uppercase ;//pour les majuscule
+                letter-spacing: .2rem;//l 'espace entre les lettre
                 margin-top: 1.5rem;
                 color: $color-5;
             }
@@ -48,10 +52,10 @@
 
         ul{
             height: 100%;
-            display: grid;
+            display: grid;//pour que ca se repartisse correctement
 
             li{
-                padding: 1rem 0 1rem .4rem;
+                padding: 1rem 0 1rem .4rem;// 1 rem en haut 0 en bas 1droite et 4 a gauche
                 font-size: 1.3rem;
                 position: relative;
 
@@ -65,14 +69,16 @@
                 }
 
                 .navActive{
+                    //je color quand j'appuis sur mon element
                     color: $color-4;
                 }
 
                 i {
+
                     position: absolute;
                     font-size: 0.95rem;
-                    transform: translateY(3px);
-                    transition: .2s ease;
+                    transform: translateY(3px);//legerement les decalé
+                    transition: .2s ease;// au hover
                 }
 
                 span{
@@ -82,6 +88,7 @@
         }
     }
 }
+    // la 3eme parti du grid
 .socialNetwork{
     grid-area: 3;
 
@@ -89,7 +96,7 @@
         display: flex;
         width: 264px;
         padding: 0 14px;
-        justify-content: space-between;
+        justify-content: space-around;
 
         li{
             font-size: 1.5rem;
@@ -97,7 +104,7 @@
             color: $color-1;
             border-radius: 50%;
             padding: .5rem .8rem;
-            transition: 0.3s;
+            transition: 0.5s;
             cursor: pointer;
 
             a:visited{
@@ -105,7 +112,7 @@
             }
 
             &:hover{
-                background: $color-4;
+                background: $color-5;
             }
         }
     }
@@ -124,17 +131,18 @@
         }
     }
 }
-
+//a partir de 850 tablette
 @media screen and (max-width: 850px) {
     .sidebar{
         display: flex;
         min-height: 50px;
         margin-bottom: .2rem;
         width: 100%;
-
+//on fait disparaitre le social network
         .id, .socialNetwork{
             display: none;
         }
+        //tu prend une width total
         .navigation{
             width: 100%;
             padding: .1rem 1rem;
@@ -144,17 +152,18 @@
                 justify-content: space-between !important;
 
                 span{
+                    // pour qu'il se rapproche de son icons
                     margin-left: 1.5rem !important;
                 }
             }
         }
     }
 }
-
+//pour le mobile on laisse juste les icons
 @media screen and (max-width: 580px){
     .sidebar{
         ul{
-            justify-content: space-around !important;
+            justify-content: space-around !important;//il se decole des bords
 
             li{
                 padding: 1rem 0 !important;
@@ -164,6 +173,7 @@
                  font-size: 1.4rem !important;
                  transform: translateY(-3px) !important;   
             }
+            //on enleve les textes
             span {
                 display: none;
             }
